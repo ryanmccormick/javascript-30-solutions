@@ -1,4 +1,4 @@
-// using an IIFE encapsulate and initialize my drum kit code below.
+// using an IIFE encapsulate and initialize my code below.
 // global and docRef are aliases to the window and document that are
 // passed into the IIFE params at the very bottom.
 (function(global, docRef) {
