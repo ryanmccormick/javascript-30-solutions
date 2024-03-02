@@ -74,11 +74,26 @@
     console.log(`EXERCISE 4: Find and remove comment with ID: ${targetId}`);
     console.log(`Step 1: Find comment with ID: ${targetId}:\n`, result ? fmtJSON(result) : 'NOT FOUND');
     console.log('Step 2: Delete comment with ID');
+
+    // this is the best and preferred version because an array index is susceptible to change, but
+    // this exercise wants use to use find index.
     const resultsWithCommentRemoved = getCommentData().filter((comment) => {
       return comment.id !== targetId;
     });
 
-    const newResult = resultsWithCommentRemoved.find(finderFn);
+    // find the index of the comment.
+    const indexOfComment = getCommentData().findIndex((comment) => comment.id === targetId);
+
+    // filter out comment at index location.
+    const altResultsWithCommentRemoved = getCommentData().filter((comment, index) => {
+      return index !== indexOfComment;
+    });
+
+    ////
+    // commented out in favor of results filtered by index
+    // const newResult = resultsWithCommentRemoved.find(finderFn);
+    ////
+    const newResult = altResultsWithCommentRemoved.find(finderFn);
     console.log(
       `Step 3: Find comment with ID: ${targetId} after delete:\n`,
       newResult ? fmtJSON(newResult) : 'NOT FOUND',
