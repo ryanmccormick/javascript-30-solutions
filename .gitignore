@@ -3,3 +3,6 @@
 
 # IDE Files
 .idea/
+
+# Dependencies
+node_modules/
