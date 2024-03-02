@@ -1,0 +1,15 @@
+{
+  "name": "javascript-30-solutions",
+  "version": "1.0.0",
+  "description": "This repo contains my solutions to the [JavaScript30 course](https://javascript30.com/) by Wes Bos. Resources provided by the resource file repo located at the [JavaScript30 resource file repo](https://github.com/wesbos/JavaScript30).",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"./src/**/*.{js,css,html}\" --config ./.prettierrc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.2.5"
+  }
+}
